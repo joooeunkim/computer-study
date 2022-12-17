@@ -43,7 +43,7 @@
 - Stack
 - Queue
 - Tree
-- Binary Tree
+- Binary Tree, BST
 - Graph
 
 ##### 응용 자료 구조
@@ -52,6 +52,9 @@
 - Heap & Priority Queue
 - Indexed Tree (Segment Tree)
 - Trie
+- MST
+- B-tree, B+tree
+- Hashmap, Hashtable
 
 ### Algorithm (알고리즘)
 
