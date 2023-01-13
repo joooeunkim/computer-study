@@ -94,11 +94,17 @@
 
 ### Database (데이터베이스)
 
-- 데이터베이스
-- 정규화
-- Index
-- Transaction
-- NoSQL
+- 키(Key)
+- SQL - JOIN
+- SQL Injection
+- SQL vs NoSQL
+- 정규화(Nomalization)
+- 이상(Anomaly)
+- 인덱스(INDEX)
+- 트랜잭션(Transaction)
+- 트랜잭션 격리 수준(Transaction Isolation Level)
+- 저장 프로시저(Stored PROCEDURE)
+- 레디스(Redis)
 
 ### Network (네트워크)
 
