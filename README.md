@@ -115,6 +115,11 @@
 - HTTP 와 HTTPS
 - DNS round robin 방식
 - 웹 통신의 큰 흐름
+- 대칭키 & 공개키
+- TLS/SSL handshake
+- 로드 밸런싱(Load Balancing)
+- Blocking,Non-blocking & Synchronous,Asynchronous
+- Blocking & Non-Blocking I/O
 
 ### Design Pattern (디자인 패턴)
 
