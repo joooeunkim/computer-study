@@ -50,7 +50,6 @@ public class Main_BJ_21610_마법사상어와비바라기_김주은 {
 				map[nr][nc]+=1;
 			}
 			
-			
 			//3. 비온 곳에 물복사버그 마법 시전
 			int[][] map2 = new int[N][N];
 			for(int i=0;i<size;i++) {
