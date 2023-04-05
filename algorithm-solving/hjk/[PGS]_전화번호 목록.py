@@ -1,18 +1,18 @@
-//풀이 시간 : 55분
+//풀이 시간 : 30분
 //문제 핵심 내용 : 해시 문제 
-//회고 : 효율성에서 계속 통과가 안되어 시간이 오래걸림
+//회고 : 재풀이 해보면서 시간을 줄임
 
 def solution(phone_book):
     phone_book = sorted(phone_book)
-    hash_dict = {}
+    dict = {}
 
     for num in phone_book:
-        hash_dict[num] = 1
+        dict[num] = 1
 
     for num in phone_book:
         a = ''
-        for j in num:
-            a += j
-            if a in hash_dict and a != num:
+        for i in num:
+            a += i
+            if a in dict and a != num:
                 return False
     return True
