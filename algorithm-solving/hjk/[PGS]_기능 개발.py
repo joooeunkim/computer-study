@@ -5,8 +5,8 @@
 from collections import deque
 
 def solution(progresses, speeds):
-    answer = []
-    days = deque()
+    ans = []
+    day = deque()
 
     tmp = 0
     for i in range(len(progresses)):
@@ -14,21 +14,21 @@ def solution(progresses, speeds):
             tmp = (100 - progresses[i]) // speeds[i]
         else:
             tmp = (100 - progresses[i]) // speeds[i] + 1
-        days.append(tmp)
+        day.append(tmp)
 
     time = 0
     res = 0
-    while days:
-        if days[0] == time:
+    while day:
+        if day[0] == time:
             res += 1
-            days.popleft()
+            day.popleft()
         else:
             if res > 0:
-                answer.append(res)
+                ans.append(res)
                 res = 0
             time += 1
-    answer.append(res)
+    ans.append(res)
 
-    return answer
+    return ans
 
 print(solution([93, 30, 55], [1, 30, 5]))
