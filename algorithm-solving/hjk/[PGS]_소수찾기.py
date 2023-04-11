@@ -12,10 +12,10 @@ def solution(numbers):
     per = []
     for i in range(1, len(numbers) + 1):
         per += list(permutations(nums, i))
-    n_nums = [int(('').join(p)) for p in per]
+    nums_n = [int(('').join(p)) for p in per]
 
-    n_nums = list(set(n_nums))
-    for n in n_nums:
+    nums_n = list(set(nums_n))
+    for n in nums_n:
         if n < 2:
             continue
         check = True
