@@ -4,9 +4,9 @@
 
 from itertools import product
 def solution(word):
-    lst = []
+    arr = []
     for i in range(1, 6):
-        lst += list(map(''.join, product('AEIOU', repeat=i)))
-    lst.sort()
-    answer = lst.index(word) + 1
+        arr += list(map(''.join, product('AEIOU', repeat=i)))
+    arr.sort()
+    answer = arr.index(word) + 1
     return answer
