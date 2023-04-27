@@ -1,16 +1,29 @@
 //풀이 시간 : 20분
 //문제 핵심 내용 : dfs/bfs로 경우의 수를 구하는 문제
-//회고 : bfs로 풀었는데 dfs로도 다시 한 번 풀어 봐야겠다.
+//회고 : queue를 사용해 다시 풀기 완료
+
+from collections import deque
 
 def solution(numbers, target):
-    lst = [0]
+    answer = 0
+    queue = deque()
+    n = len(numbers)
+    queue.append([numbers[0], 0])
+    queue.append([-1*numbers[0], 0])
+    
+    while queue:
+        num, idx = queue.popleft()
+        idx += 1
+        
+        if idx < n :
+            queue.append([num + numbers[idx], idx])
+            queue.append([num - numbers[idx], idx])
+            
+        else:
+            if num == target:
+                answer += 1
+    
 
-    for number in numbers:
-        result = []
-        for i in lst:
-            result.append(i + number)
-            result.append(i - number)
-
-        lst = result
-
-    return lst.count(target)
+    return answer
+    
+    
