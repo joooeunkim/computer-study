@@ -1,6 +1,6 @@
-//풀이 시간 : 50분
-//문제 핵심 내용 : dfs/bfs 문제
-//회고 : 시간을 줄이기 위해 해시를 사용해서 해결.
+//풀이 시간 : 20분
+//문제 핵심 내용 : dfs/bfs 문제 
+//회고 : 시간을 줄이기 위해 해시를 사용해서 해결. stack 사용 간단해결
 
 from collections import defaultdict
 
@@ -9,22 +9,22 @@ def solution(tickets):
     path = []
 
     graph = defaultdict(list)
-    for (start, end) in tickets:
+
+    for (start,end) in tickets:
         graph[start].append(end)
 
-    for des in graph.keys():
-        graph[des].sort(reverse=True)
+    for destination in graph.keys():
+        graph[destination].sort(reverse=True)
 
-    stack = ["ICN"]
+    stack =['ICN']
 
     while stack:
-        top = stack.pop()
+        s = stack[-1]
 
-        if top not in graph or not graph[top]:
-            path.append(top)
+        if graph[s]:
+            stack.append(graph[s].pop())
 
         else:
-            stack.append(top)
-            stack.append(graph[top].pop())
-
-    return path[::-1]
+            path.append(stack.pop())
+    path.reverse()
+    return path
